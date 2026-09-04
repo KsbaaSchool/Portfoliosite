@@ -93,9 +93,8 @@ Ik heb de site op mijn laptop gebouwd en dus niet mobile first. mdn raadt mobile
 en dat had ik beter kunnen doen, want dan begin je klein en bouw je omhoog in plaats van
 andersom.
 
-Getest heb ik hem daarna wel, met f12 op 320, 375, 768 en 1280 breed. nergens horizontaal
-scrollen en overal leesbaar. daarna heb ik er 3 media queries in gezet voor mobiel, tablet
-en desktop.
+Getest heb ik hem daarna wel met f12 op mobiel, tablet en desktop. nergens horizontaal
+scrollen en overal leesbaar. daarna heb ik er 3 media queries voor die 3 breedtes in gezet.
 
 Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
 
