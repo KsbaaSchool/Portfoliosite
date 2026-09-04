@@ -99,15 +99,19 @@ en desktop.
 
 Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
 
-## Wat niet helemaal semantisch is
+## Wat wel en niet semantisch is
 
-In criterium 1 staat dat je correcte semantische elementen moet gebruiken. dat klopt voor
-het grootste deel, ik heb header, nav, main, section, article en footer. maar 3 dingen niet:
+Semantisch betekent dat je het element pakt dat zegt wat iets is. header voor de bovenkant,
+nav voor het menu, main voor de inhoud, article voor een blogpost die op zichzelf staat en
+footer voor onderaan. dat heb ik op alle 4 de paginas zo gedaan.
 
-- de lege divs met class box zijn er puur voor de animatie, die betekenen inhoudelijk niks
+Een div is geen fout. een div is juist bedoeld voor iets dat inhoudelijk niks betekent. mijn
+lege divs met class box staan er puur voor de hover animatie, die betekenen niks, dus daar
+hoort een div en niks anders. wat wel fout zou zijn is div class="header" schrijven terwijl
+het element header gewoon bestaat.
 
-Eerlijk gezegd: ik was met die hover animatie bezig, ik zat in de flow en vond het gewoon
-leuk om te bouwen, dus ben ik doorgegaan in plaats van dit netjes te maken. 
+Wat nog beter kan: mijn portret is nu een div met tekst erin. zodra ik een echte foto heb
+wordt dat een img met een alt tekst, want dan is het wel inhoud. en mijn footers zijn leeg.
 
 ## Wat ik hierna nog ga doen
 
