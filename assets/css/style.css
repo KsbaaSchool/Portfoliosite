@@ -52,7 +52,7 @@ margin: 20px auto;
   height: 100vh;
   object-fit: cover;
   z-index: -1; 
-}
+} 
 
 
 
@@ -177,7 +177,7 @@ font-size: 20px;
 
 @media (min-width: 768px) {
 
-main {
+body {
 
 max-width: 700px;
 margin: auto;
@@ -189,7 +189,7 @@ margin: auto;
 
 @media (min-width: 1024px) {
 
-main {
+body {
 
 max-width: 900px;
 
