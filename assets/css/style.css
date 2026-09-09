@@ -1,267 +1,198 @@
-
-     @font-face {
-     font-family: 'MonsterFriendFont';
-          src: url('../fonts/MonsterFriendFore.otf') format('opentype');
-     font-display: swap;
-     }
-
-     @font-face {
-     font-family: 'sans';
-          src: url('../fonts/determinationsansweb-webfont.ttf') format('truetype');
-     font-display: swap;
-     }
-
-     @font-face {
-     font-family: 'hachiro';
-          src: url('../fonts/HachicroRegular.ttf') format('truetype');
-     font-display: swap;
-     }
-
-     ul{
-
-     list-style: none;
-
-     }
-
-
-
-          h1 {
-
-
-               color:aliceblue;
-               font-family: "press start 2p", sans-serif;
-               padding: 8px;
-               border-style: inset;
-
-               font-size: 30px;
-
-               width: fit-content;
-
-          border-color:  black;
-          border-radius: 20px;
-
-
-          margin: 20px auto;
-     transform: translateX(15px);
-
-
-          }
-
-
-     .achtergrond-video {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100vw;
-     height: 100vh;
-     object-fit: cover;
-     z-index: -1; 
-     } 
-
-
-
-
-
-     p{
-
-     font-family: "sans";
-
-     color: aliceblue;
-
-
-     }
-
-
-     h2 {
-          padding: 5px;
-     font-family: "MonsterFriendFont";
-     color: red;
-     }
-
-
-     li {
-     border-style: inset;
-     border-radius: 5px;
-     width: fit-content;
-     padding: 10px;
-     font-size: 30px;
-          font-family: 'sans';
-     color: white;
-     margin: auto;
-
-          position: relative;
-
-     }
-
-
-     .contactli {
-
-     color: rgb(0, 30, 255);
-     margin: 10px 0;
-
-     }
-
-     a{
-
-          text-decoration: none;
-
-          position: relative;
-     z-index: 1;
-          color:inherit;
-     }
-
-
-
-
-     a:hover + .box{
-
-     animation: expand;
-     animation-duration: 1s;
-
-     }
-
-     .box{
-
-
-     position: absolute;
-     inset: 10px 15px 10px;
-
-     background: red;
-     z-index: 0;
-
-          opacity: 0;
-
-
-
-     }
-
-     @keyframes expand {
-
-          50%{transform: scale(1.2);}
-          50%{opacity: 40%;}
-     }
-
-
-     label{
-
-          font-size: 30px;
-          display: block;
-          color:aliceblue;
-          font-family: 'sans';
-
-     }
-
-
-     input{
-          font-family: 'sans', sans-serif;
-          font-size: 25px;
-          padding: 10px;
-          border-radius: 20px;
-
-          align-self: flex-start;
-          
-          width: 500px;
-          height: 20px;
-          margin-left: 120px;
-
-          border:none;
-
-
-          color:aliceblue;
-     background-color: black;
-     }
-
-
-     @keyframes redshadow
-     {
-          50%{box-shadow: 5px 5px 50px rgb(78, 184, 241);  }
-
-
-     }
-
-     input:focus{
-
-          outline: 1px dotted aliceblue;
-
-     }
-     
-
-     input:hover{
-
-
+@font-face {
+  font-family: "MonsterFriendFont";
+  src: url("../fonts/MonsterFriendFore.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "sans";
+  src: url("../fonts/determinationsansweb-webfont.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "hachiro";
+  src: url("../fonts/HachicroRegular.ttf") format("truetype");
+  font-display: swap;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  color: aliceblue;
+  font-family: "press start 2p", sans-serif;
+  padding: 8px;
+  border-style: inset;
+
+  font-size: 30px;
+
+  width: fit-content;
+
+  border-color: black;
+  border-radius: 20px;
+
+  margin: 20px auto;
+  transform: translateX(15px);
+}
+
+.achtergrond-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+p {
+  font-family: "sans";
+
+  color: aliceblue;
+}
+
+h2 {
+  padding: 5px;
+  font-family: "MonsterFriendFont";
+  color: red;
+}
+
+li {
+  border-style: inset;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+  font-size: 30px;
+  font-family: "sans";
+  color: white;
+  margin: auto;
+
+  position: relative;
+}
+
+.contactli {
+  color: rgb(0, 30, 255);
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+
+  position: relative;
+  z-index: 1;
+  color: inherit;
+}
+
+a:hover + .box {
+  animation: expand;
+  animation-duration: 1s;
+}
+
+.box {
+  position: absolute;
+  inset: 10px 15px 10px;
+
+  background: red;
+  z-index: 0;
+
+  opacity: 0;
+}
+
+@keyframes expand {
+  50% {
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 40%;
+  }
+}
+
+label {
+  font-size: 30px;
+  display: block;
+  color: aliceblue;
+  font-family: "sans";
+}
+
+input {
+  font-family: "sans", sans-serif;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 20px;
+
+  align-self: flex-start;
+
+  width: 500px;
+  height: 20px;
+  margin-left: 120px;
+
+  border: none;
+
+  color: aliceblue;
+  background-color: black;
+}
+
+@keyframes redshadow {
+  50% {
+    box-shadow: 5px 5px 50px rgb(78, 184, 241);
+  }
+}
+
+input:focus {
+  outline: 1px dotted aliceblue;
+}
+
+input:hover {
   animation: redshadow 2s ease-in-out infinite;
+}
 
-     }
+#zoekcontainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
 
+  margin: 165px 70px;
+}
 
+#potret {
+  width: 190px;
+  height: 220px;
 
-     #zoekcontainer{
+  object-fit: cover;
+  border-radius: 50%;
+  border: rgb(239, 217, 217) solid 2px;
 
-          position: fixed;
-     display: flex;
-     flex-direction: column;
-     width: 300px;
-     gap: 10px;
+  font-family: "sans";
+  float: right;
+  color: white;
 
-     margin: 165px 70px;
+  box-shadow: 10px 5px 50px rgb(255, 0, 0);
+}
 
-     }
+@media (max-width: 480px) {
+  #potret {
+    float: none;
+    margin: 20px auto;
+  }
 
-     #potret{
+  li {
+    font-size: 20px;
+  }
+}
 
+@media (min-width: 768px) {
+  body {
+    max-width: 700px;
+    margin: auto;
+  }
+}
 
-     width: 190px;
-     height: 220px;
-
-     object-fit: cover;
-     border-radius: 50%;
-     border: rgb(239, 217, 217) solid 2px;
-
-     font-family: "sans";
-          float: right;
-     color: white;
-
-     box-shadow: 10px 5px 50px rgb(255, 0, 0);
-     }
-
-
-
-     @media (max-width: 480px) {
-
-     #potret {
-
-     float: none;
-     margin: 20px auto;
-
-     }
-
-     li {
-
-     font-size: 20px;
-
-     }
-
-     }
-
-
-     @media (min-width: 768px) {
-
-     body {
-
-     max-width: 700px;
-     margin: auto;
-
-     }
-
-     }
-
-
-     @media (min-width: 1024px) {
-
-     body {
-
-     max-width: 900px;
-
-     }
-
-     }
+@media (min-width: 1024px) {
+  body {
+    max-width: 900px;
+  }
+}
