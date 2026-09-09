@@ -87,6 +87,10 @@ map. in assets staan css, fonts, img en video netjes apart. dat had ik ooit gele
 wordt ook zo aangeraden. het is veel overzichtelijker, ik weet meteen waar ik moet zijn, en
 ik kan er zo een nieuwe pagina of blogpost bij zetten zonder dat ik iets hoef te verplaatsen.
 
+# Keuze 7, zoekbalk
+
+ik wilde oefenen met javascript dus heb ik een zoek balk toegevoegd beneden en had het eerst niet semantisch, maar daarna <search> toegevoegd, door de validator.
+
 ## Eerlijk over mobile first
 
 Ik heb de site op mijn laptop gebouwd en dus niet mobile first. mdn raadt mobile first aan
@@ -110,8 +114,11 @@ hoort een div en niks anders. wat wel fout zou zijn is div class="header" schrij
 het element header gewoon bestaat.
 
 Wat nog beter kan: mijn portret is nu een div met tekst erin. zodra ik een echte foto heb
-wordt dat een img met een alt tekst, want dan is het wel inhoud. en mijn footers zijn leeg.
+wordt dat een img met een alt tekst, want dan is het wel inhoud. en mijn footers zijn leeg. 
 
 ## Wat ik hierna nog ga doen
 
 Een echte foto in het portret zetten met een alt tekst erbij, en iets in mijn footers zetten.
+
+
+
