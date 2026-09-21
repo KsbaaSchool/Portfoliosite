@@ -1,120 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mijn blog waarin ik bijhoud wat ik leer tijdens het bouwen van mijn portfolio site, van html en css tot javascript."
+    />
+    <meta name="author" content="Khalid Sbaa" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Blog - Khalids Portfolio</title>
+  </head>
 
-<head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<title>Blog - Khalids Portfolio</title>
+  <body>
+    <video autoplay muted loop playsinline class="achtergrond-video">
+      <source src="assets/video/SansVideo.mp4" type="video/mp4" />
+    </video>
 
-</head>
+    <header>
+      <h1>Blog</h1>
 
-<body>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"> Whoami</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="projecten.html">Projecten</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+            <div class="box"></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <article>
+        <h2>Begonnen met deze site</h2>
+        <p>1 september 2026</p>
+        <p>
+          Ik ben deze week begonnen aan mijn portfolio site. eerst had ik alleen
+          een index.html met wat tekst erin en verder niks. Ik wist eigenlijk
+          niet zo goed waar ik moest beginnen dus ben ik eerst wat filmpjes op
+          youtube gaan kijken over html en css. dat hielp wel want ik snapte
+          daarna beter hoe de structuur van een pagina in elkaar zit.
+        </p>
+      </article>
 
-  <video autoplay muted loop playsinline class="achtergrond-video">
-    <source src="assets/video/SansVideo.mp4" type="video/mp4">
-  </video>
+      <article>
+        <h2>Semantische elementen</h2>
+        <p>3 september 2026</p>
+        <p>
+          Ik heb geleerd dat je niet zomaar overal hetzelfde element voor moet
+          gebruiken. Voor de bovenkant van de pagina gebruik je header, voor het
+          menu nav, voor de inhoud main en onderaan footer. Voor losse stukjes
+          zoals een blogpost gebruik je article. Ik had eerst overal section
+          staan maar dat is meer voor een onderdeel van een pagina, en article
+          is voor iets wat op zichzelf staat. Ook heb ik geleerd dat je menu
+          eigenlijk een lijstje is, dus ul met li erin, en de links daar
+          tussenin.
+        </p>
+      </article>
 
+      <article>
+        <h2>CSS koppelen en dat het niet werkte</h2>
+        <p>4 september 2026</p>
+        <p>
+          Toen ik css ging toevoegen werkte het eerst niet. Ik had een kleur
+          gezet op h2 maar ik zag niks veranderen. na wat zoeken bleek dat mijn
+          browser nog de oude versie liet zien, dus met ctrl shift r moest ik
+          hem opnieuw laden. daarna werkte het wel. Ik heb ook geleerd dat je
+          goed moet kijken naar het pad in de link tag, want als je css bestand
+          in een andere map staat dan klopt het pad niet meer.
+        </p>
+      </article>
 
+      <article>
+        <h2>Map structuur en eigen fonts</h2>
+        <p>4 september 2026</p>
+        <p>
+          Ik had eerst alles los in 1 map staan en dat werd snel rommelig. dus
+          heb ik een assets map gemaakt met daarin css, fonts, img en video. nu
+          weet ik precies waar alles staat en kan ik er zo een nieuwe pagina bij
+          zetten zonder dat ik hoef te zoeken.
+        </p>
+        <p>
+          Daarna heb ik 3 fonts gedownload en ingeladen met font face. je
+          verzint daar zelf een naam en zet het pad naar het bestand erbij, en
+          die naam gebruik je verder gewoon in font family. de titels doe ik in
+          press start 2p van google fonts want dat past bij de game stijl.
+        </p>
+      </article>
 
+      <article>
+        <h2>Video als achtergrond</h2>
+        <p>4 september 2026</p>
+        <p>
+          Ik wilde geen saaie achtergrond dus heb ik een video achter de site
+          gezet. eerst probeerde ik het met background image maar dat kan niet
+          met een video. het moet met een video tag in de html en dan zet je hem
+          met css op position fixed en z index min 1 zodat hij achter alles
+          blijft.
+        </p>
+        <p>
+          Autoplay werkte eerst niet. dat komt omdat browsers een video met
+          geluid niet zomaar laten starten. met muted erbij ging het wel.
+        </p>
+      </article>
 
+      <article>
+        <h2>De knopjes en de animatie</h2>
+        <p>4 september 2026</p>
+        <p>
+          Hier ben ik het langst mee bezig geweest. ik wilde dat er iets achter
+          de link beweegt als je er met je muis overheen gaat. eerst deed ik de
+          animatie op de link zelf maar dan beweegt de tekst mee en dat vond ik
+          lelijk.
+        </p>
+        <p>
+          Uiteindelijk heb ik een leeg blokje naast de link gezet en die pak ik
+          met a hover + box. die + is de adjacent sibling selector, dat is het
+          element dat er direct naast staat. de beweging zelf zit in een
+          keyframes met scale erin. daarna moest ik nog met z index zorgen dat
+          de tekst boven het blokje bleef staan.
+        </p>
+      </article>
 
+      <article>
+        <h2>Portret met een glow</h2>
+        <p>4 september 2026</p>
+        <p>
+          Op de whoami pagina wilde ik een foto van mezelf. die heb ik nog niet
+          dus staat er nu even tekst in. het is een div met een vaste breedte en
+          hoogte, border radius op 50 procent zodat hij rond wordt, en display
+          grid met place items center zodat de tekst precies in het midden
+          staat. met box shadow heb ik er een rode gloed omheen gezet zodat hij
+          opvalt tegen de video.
+        </p>
+      </article>
 
-<header>       <h1>Blog</h1>    
-    
-    <nav> 
-     <ul>
-        <li><a href="index.html"> Whoami</a><div class="box"></div> </li>
-        <li><a href="projecten.html">Projecten</a> <div class="box"></div></li>
-        <li><a href="blog.html">Blog</a><div class="box"></div> </li>
-        <li><a href="contact.html">Contact</a><div class="box"></div></li>
-      </ul>
-          </nav>    
-</header>
+      <article>
+        <h2>De rest van de paginas</h2>
+        <p>4 september 2026</p>
+        <p>
+          Projecten en contact heb ik nu ook ingevuld. ze gebruiken precies
+          dezelfde header en hetzelfde menu als de andere paginas zodat je nooit
+          hoeft te zoeken waar je bent.
+        </p>
+      </article>
 
+      <article>
+        <h2>Responsive maken</h2>
+        <p>4 september 2026</p>
+        <p>
+          Het laatste wat ik heb gedaan is de site responsive maken. Dat doe je
+          met media queries, dat is eigenlijk een soort if statement in css. Je
+          zegt dan vanaf een bepaalde breedte moet de layout er anders uitzien.
+          Ik heb het getest met f12 in de browser op 480, 768 en 1024 pixels.
+          Bij mobiel staat alles onder elkaar en op een breder scherm naast
+          elkaar.
+        </p>
+      </article>
 
-<main>  
-    
-<article>
- <h2> Begonnen met deze site </h2>
-<p>1 september 2026</p>
-<p>Ik ben deze week begonnen aan mijn portfolio site. eerst had ik alleen een index.html met wat tekst erin en verder niks. Ik wist eigenlijk niet zo goed waar ik moest beginnen dus ben ik eerst wat filmpjes op youtube gaan kijken over html en css. dat hielp wel want ik snapte daarna beter hoe de structuur van een pagina in elkaar zit.</p>
-</article>
+      <article>
+        <h2>Media queries</h2>
+        <p>4 september 2026</p>
+        <p>
+          Css die alleen aan gaat bij een bepaalde schermbreedte. max width is
+          tot en met, min width is vanaf. ik heb er 3, voor mobiel, tablet en
+          desktop. mobiel is tot en met 480, daar zet ik bij het portret float
+          op none zodat de tekst er niet meer naast geduwd wordt, en de knopjes
+          wat kleiner. tablet is vanaf 768 en desktop vanaf 1024, die krijgen
+          allebei een max width op main zodat de regels tekst niet superlang
+          worden.
+        </p>
+      </article>
 
-<article>
-<h2>Semantische elementen</h2>
-<p>3 september 2026</p>
-<p>Ik heb geleerd dat je niet zomaar overal hetzelfde element voor moet gebruiken. Voor de bovenkant van de pagina gebruik je header, voor het menu nav, voor de inhoud main en onderaan footer. Voor losse stukjes zoals een blogpost gebruik je article. Ik had eerst overal section staan maar dat is meer voor een onderdeel van een pagina, en article is voor iets wat op zichzelf staat. Ook heb ik geleerd dat je menu eigenlijk een lijstje is, dus ul met li erin, en de links daar tussenin.</p>
-</article>
+      <article>
+        <h2>Even iets anders dan code</h2>
+        <p>4 september 2026</p>
+        <p>
+          Ik ben vanochtend om 6 uur wakker geworden en het is nu nacht 00:12 om
+          precies te zijn en ik zit er nog steeds. de hele dag, zonder echt te
+          stoppen. en morgen weer, en de dag daarna ook.
+        </p>
+        <p>
+          Het gekke is dat het bouwen zelf het probleem niet is. als ik eenmaal
+          in de flow zit wil ik er niet uit. dan ben ik een uur bezig met 1
+          regel css en merk ik niet eens dat het al donker is geworden. pauze
+          nemen voelt dan als opgeven, dus doe ik het niet, en dan zit ik ineens
+          8 uur achter elkaar.
+        </p>
+        <p>
+          Waar ik echt van in de stress schiet is niet de code. het is alles
+          eromheen. Ik verlies zoveel tijd in bewijsstukken inleveren, mijn
+          logboek bijhouden, overal opschrijven wat ik gedaan heb en waarom ik
+          het zo gedaan heb. ik kan een hele dag bouwen en dan is het nog niet
+          genoeg, want als ik het niet ook nog opschrijf dan telt het niet.
+        </p>
+      </article>
+    </main>
 
-<article>
-<h2>CSS koppelen en dat het niet werkte</h2>
-<p>4 september 2026</p>
-<p>Toen ik css ging toevoegen werkte het eerst niet. Ik had een kleur gezet op h2 maar ik zag niks veranderen. na wat zoeken bleek dat mijn browser nog de oude versie liet zien, dus met ctrl shift r moest ik hem opnieuw laden. daarna werkte het wel. Ik heb ook geleerd dat je goed moet kijken naar het pad in de link tag, want als je css bestand in een andere map staat dan klopt het pad niet meer.</p>
-</article>
-
-<article>
-<h2>Map structuur en eigen fonts</h2>
-<p>4 september 2026</p>
-<p>Ik had eerst alles los in 1 map staan en dat werd snel rommelig. dus heb ik een assets map gemaakt met daarin css, fonts, img en video. nu weet ik precies waar alles staat en kan ik er zo een nieuwe pagina bij zetten zonder dat ik hoef te zoeken.</p>
-<p>Daarna heb ik 3 fonts gedownload en ingeladen met font face. je verzint daar zelf een naam en zet het pad naar het bestand erbij, en die naam gebruik je verder gewoon in font family. de titels doe ik in press start 2p van google fonts want dat past bij de game stijl.</p>
-</article>
-
-<article>
-<h2>Video als achtergrond</h2>
-<p>4 september 2026</p>
-<p>Ik wilde geen saaie achtergrond dus heb ik een video achter de site gezet. eerst probeerde ik het met background image maar dat kan niet met een video. het moet met een video tag in de html en dan zet je hem met css op position fixed en z index min 1 zodat hij achter alles blijft.</p>
-<p>Autoplay werkte eerst niet. dat komt omdat browsers een video met geluid niet zomaar laten starten. met muted erbij ging het wel.</p>
-</article>
-
-<article>
-<h2>De knopjes en de animatie</h2>
-<p>4 september 2026</p>
-<p>Hier ben ik het langst mee bezig geweest. ik wilde dat er iets achter de link beweegt als je er met je muis overheen gaat. eerst deed ik de animatie op de link zelf maar dan beweegt de tekst mee en dat vond ik lelijk.</p>
-<p>Uiteindelijk heb ik een leeg blokje naast de link gezet en die pak ik met a hover + box. die + is de adjacent sibling selector, dat is het element dat er direct naast staat. de beweging zelf zit in een keyframes met scale erin. daarna moest ik nog met z index zorgen dat de tekst boven het blokje bleef staan.</p>
-</article>
-
-<article>
-<h2>Portret met een glow</h2>
-<p>4 september 2026</p>
-<p>Op de whoami pagina wilde ik een foto van mezelf. die heb ik nog niet dus staat er nu even tekst in. het is een div met een vaste breedte en hoogte, border radius op 50 procent zodat hij rond wordt, en display grid met place items center zodat de tekst precies in het midden staat. met box shadow heb ik er een rode gloed omheen gezet zodat hij opvalt tegen de video.</p>
-</article>
-
-<article>
-<h2>De rest van de paginas</h2>
-<p>4 september 2026</p>
-<p>Projecten en contact heb ik nu ook ingevuld. ze gebruiken precies dezelfde header en hetzelfde menu als de andere paginas zodat je nooit hoeft te zoeken waar je bent.</p>
-</article>
-
-<article>
-<h2>Responsive maken</h2>
-<p>4 september 2026</p>
-<p>Het laatste wat ik heb gedaan is de site responsive maken. Dat doe je met media queries, dat is eigenlijk een soort if statement in css. Je zegt dan vanaf een bepaalde breedte moet de layout er anders uitzien. Ik heb het getest met f12 in de browser op 480, 768 en 1024 pixels. Bij mobiel staat alles onder elkaar en op een breder scherm naast elkaar.</p>
-</article>
-
-
-<article>
-<h2>Media queries</h2>
-<p>4 september 2026</p>
-<p>Css die alleen aan gaat bij een bepaalde schermbreedte. max width is tot en met, min width is vanaf. ik heb er 3, voor mobiel, tablet en desktop. mobiel is tot en met 480, daar zet ik bij het portret float op none zodat de tekst er niet meer naast geduwd wordt, en de knopjes wat kleiner. tablet is vanaf 768 en desktop vanaf 1024, die krijgen allebei een max width op main zodat de regels tekst niet superlang worden.</p>
-</article>
-
-<article>
-<h2>Even iets anders dan code</h2>
-<p>4 september 2026</p>
-<p>Ik ben vanochtend om 6 uur wakker geworden en het is nu nacht 00:12 om precies te zijn en ik zit er nog steeds. de hele dag, zonder echt te stoppen. en morgen weer, en de dag daarna ook.</p>
-<p>Het gekke is dat het bouwen zelf het probleem niet is. als ik eenmaal in de flow zit wil ik er niet uit. dan ben ik een uur bezig met 1 regel css en merk ik niet eens dat het al donker is geworden. pauze nemen voelt dan als opgeven, dus doe ik het niet, en dan zit ik ineens 8 uur achter elkaar.</p>
-<p>Waar ik echt van in de stress schiet is niet de code. het is alles eromheen. Ik verlies zoveel tijd in bewijsstukken inleveren, mijn logboek bijhouden, overal opschrijven wat ik gedaan heb en waarom ik het zo gedaan heb. ik kan een hele dag bouwen en dan is het nog niet genoeg, want als ik het niet ook nog opschrijf dan telt het niet.</p>
-</article>
-
-</main>
-
-<footer>
-
-</footer>
-
-</body>
-
+    <footer></footer>
+  </body>
 </html>
