@@ -1,68 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact met Khalid, software engineering student. Stuur een mail of bekijk mijn GitHub."
+    />
+    <meta name="author" content="Khalid Sbaa" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Contact - Khalids Portfolio</title>
+  </head>
 
-<head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<title>Contact - Khalids Portfolio</title>
+  <body>
+    <video autoplay muted loop playsinline class="achtergrond-video">
+      <source src="assets/video/SansVideo.mp4" type="video/mp4" />
+    </video>
 
-</head>
+    <header>
+      <h1>Contact</h1>
 
-<body>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"> Whoami</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="projecten.html">Projecten</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+            <div class="box"></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <section>
+        <h2>Even mailen</h2>
+        <p>
+          Heb je een vraag over mijn werk of wil je samen iets bouwen, stuur
+          gerust een mail. ik reageer meestal snel
+        </p>
+      </section>
 
-  <video autoplay muted loop playsinline class="achtergrond-video">
-    <source src="assets/video/SansVideo.mp4" type="video/mp4">
-  </video>
+      <section>
+        <h2>Stuur een bericht</h2>
+        <form id="contactform" novalidate>
+          <label for="naam">Naam</label>
+          <input id="naam" type="text" />
+          <p id="naamfout" aria-live="polite"></p>
 
+          <label for="email">Email</label>
+          <input id="email" type="email" />
+          <p id="emailfout" aria-live="polite"></p>
 
+          <label for="bericht">Bericht</label>
+          <input id="bericht" type="text" />
+          <p id="berichtfout" aria-live="polite"></p>
 
+          <div class="knopje">
+            <button type="submit">Verstuur</button>
+            <div class="box"></div>
+          </div>
+        </form>
+        <p id="verstuurd" aria-live="polite"></p>
+      </section>
 
+      <section>
+        <h2>Waar je mij vindt</h2>
+        <ul>
+          <li class="contactli">
+            <a href="mailto:khalid.sbaa12@outlook.com">Email</a>
+            <div class="box"></div>
+          </li>
+          <li class="contactli">
+            <a href="https://github.com/KsbaaSchool">Github</a>
+            <div class="box"></div>
+          </li>
+        </ul>
+      </section>
 
+      <section>
+        <h2>Wie je mailt</h2>
+        <p>
+          Khalid, 2e jaars student software engineering op de haagse hogeschool
+        </p>
+      </section>
+    </main>
 
-<header>       <h1>Contact</h1>    
-    
-    <nav> 
-     <ul>
-        <li><a href="index.html"> Whoami</a><div class="box"></div> </li>
-        <li><a href="projecten.html">Projecten</a> <div class="box"></div></li>
-        <li><a href="blog.html">Blog</a><div class="box"></div> </li>
-        <li><a href="contact.html">Contact</a><div class="box"></div></li>
-      </ul>
-          </nav>    
-</header>
+    <footer></footer>
 
-
-<main>  
-
-<section>
- <h2> Even mailen </h2>
-<p>Heb je een vraag over mijn werk of wil je samen iets bouwen, stuur gerust een mail. ik reageer meestal snel</p>
-</section>
-
-
-<section>
-<h2>Waar je mij vindt</h2>
-     <ul>
-        <li class="contactli"><a href="mailto:khalid.sbaa12@outlook.com">Email</a><div class="box"></div> </li>
-        <li class="contactli"><a href="https://github.com/KsbaaSchool">Github</a><div class="box"></div> </li>
-      </ul>
-</section>
-
-
-<section>
-<h2>Wie je mailt</h2>
-<p>Khalid, 2e jaars student software engineering op de haagse hogeschool</p>
-</section>
-
-</main>
-
-<footer>
-
-</footer>
-
-</body>
-
+    <script src="contact.js"></script>
+  </body>
 </html>

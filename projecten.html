@@ -1,69 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="De projecten die ik als software engineering student gemaakt heb, wat ik gebouwd heb en wat ik ervan geleerd heb."
+    />
 
-<head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<title>Projecten - Khalids Portfolio</title>
+    <meta name="author" content="Khalid Sbaa" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Projecten - Khalids Portfolio</title>
+  </head>
 
-</head>
+  <body>
+    <video autoplay muted loop playsinline class="achtergrond-video">
+      <source src="assets/video/SansVideo.mp4" type="video/mp4" />
+    </video>
 
-<body>
+    <header>
+      <h1>Projecten</h1>
 
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"> Whoami</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="projecten.html">Projecten</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+            <div class="box"></div>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+            <div class="box"></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <video autoplay muted loop playsinline class="achtergrond-video">
-    <source src="assets/video/SansVideo.mp4" type="video/mp4">
-  </video>
+    <main>
+      <section id="repos"></section>
+    </main>
 
+    <search id="zoekcontainer">
+      <form id="zoeksub">
+        <input id="zoekbalk" />
+      </form>
+    </search>
 
+    <footer></footer>
 
-
-
-
-<header>       <h1>Projecten</h1>    
-    
-    <nav> 
-     <ul>
-        <li><a href="index.html"> Whoami</a><div class="box"></div> </li>
-        <li><a href="projecten.html">Projecten</a> <div class="box"></div></li>
-        <li><a href="blog.html">Blog</a><div class="box"></div> </li>
-        <li><a href="contact.html">Contact</a><div class="box"></div></li>
-      </ul>
-          </nav>    
-</header>
-
-
-<main>  
-
-<section>
- <h2> Waar je naar kijkt </h2>
-<p>Ik ben net begonnen dus het is er nu 1. er komt meer bij zodra ik meer maak</p>
-</section>
-
-
-<article>
-<h2>Deze portfolio site</h2>
-<p>september 2026</p>
-<p>Zelf gebouwd met html en css. geen framework en geen template. alles opgezocht op youtube en in de docs van mdn</p>
-<p>Wat er in zit: een video als achtergrond, 3 custom fonts die ik zelf inlaad met font face, een menu met een hover animatie en een rond portret met een rode glow</p>
-<p>Het lastigste was de animatie op de knopjes. ik wilde dat er iets achter de link gebeurt en niet op de link zelf. dus heb ik een leeg blokje naast de link gezet en dat aangestuurd met de + selector. daarna moest ik nog met z index zorgen dat de tekst boven het blokje bleef staan</p>
-<p>Er zitten best veel uren in</p>
-</article>
-
-
-<article>
-<h2>Wat ik hierna wil doen</h2>
-<p>Een echte foto in het portret zetten in plaats van tekst. en later javascript erbij zodat ik de site nog mooier en professioneler kan maken</p>
-</article>
-
-</main>
-
-<footer>
-
-</footer>
-
-</body>
-
+    <script src="project.js"></script>
+  </body>
 </html>

@@ -114,11 +114,10 @@ hoort een div en niks anders. wat wel fout zou zijn is div class="header" schrij
 het element header gewoon bestaat.
 
 Wat nog beter kan: mijn portret is nu een div met tekst erin. zodra ik een echte foto heb
-wordt dat een img met een alt tekst, want dan is het wel inhoud. en mijn footers zijn leeg. 
+wordt dat een img met een alt tekst, want dan is het wel inhoud. en mijn footers zijn leeg.
 
 ## Wat ik hierna nog ga doen
 
 Een echte foto in het portret zetten met een alt tekst erbij, en iets in mijn footers zetten.
 
-
-
+## 2 modes implementeren 1 zakelijk en 1 gaming...

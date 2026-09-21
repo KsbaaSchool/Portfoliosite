@@ -10,6 +10,13 @@
   font-display: swap;
 }
 
+
+@font-face {
+  font-family: "press start 2p";
+  src: url("../fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
 @font-face {
   font-family: "hachiro";
   src: url("../fonts/HachicroRegular.ttf") format("truetype");
@@ -49,8 +56,9 @@ h1 {
 
 p {
   font-family: "sans";
-
+letter-spacing: 1px;
   color: aliceblue;
+  font-size: 20px;
 }
 
 h2 {
@@ -85,9 +93,43 @@ a {
   color: inherit;
 }
 
-a:hover + .box {
+
+
+#repos {
+  padding: 5px;
+  font-family: "MonsterFriendFont";
+  color: red;
+
+
+}
+
+a:hover + .box,
+button:hover + .box,
+button:focus-visible + .box {
   animation: expand;
   animation-duration: 1s;
+}
+
+.knopje {
+  border-style: inset;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+  margin: 10px 0;
+
+  position: relative;
+}
+
+.knopje button {
+  font-size: 30px;
+  font-family: "sans";
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 1;
 }
 
 .box {
@@ -116,6 +158,31 @@ label {
   font-family: "sans";
 }
 
+.loading{
+
+ animation: expand;
+  animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+
+.gitlinkrepo{
+ 
+    margin-bottom: 60px;
+color: lightblue;
+font-size: 17px;
+text-decoration: underline;
+
+letter-spacing: 2px;
+
+cursor: pointer;
+
+width: fit-content;
+
+}
+
+
+
+
 input {
   font-family: "sans", sans-serif;
   font-size: 25px;
@@ -128,7 +195,8 @@ input {
   height: 20px;
   margin-left: 120px;
 
-  border: none;
+  border: 1px solid rgb(243, 236, 236);
+
 
   color: aliceblue;
   background-color: black;
@@ -154,9 +222,16 @@ input:hover {
   flex-direction: column;
   width: 300px;
   gap: 10px;
+bottom: 50px;
+left: 25%;
 
-  margin: 165px 70px;
+z-index: 100;
+
+
 }
+
+
+
 
 #potret {
   width: 190px;
