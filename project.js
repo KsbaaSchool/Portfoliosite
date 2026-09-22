@@ -11,7 +11,7 @@ let gezocht = document.getElementById("zoekbalk");
 let laden = document.createElement("h2");
 laden.textContent = "repo's aan het laden...";
 laden.className = "loading";
-document.body.append(laden);
+sectie.append(laden);
 
 async function showgitrepo() {
   try {
