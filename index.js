@@ -21,15 +21,18 @@ let routes = {
   business: "business.html",
 };
 
-zoeksub.addEventListener("submit", function (e) {
-  e.preventDefault();
+// de zoekbalk staat niet meer op home, dus eerst checken of hij er is
+if (zoeksub) {
+  zoeksub.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  let pagina = gezocht.value.toLowerCase();
+    let pagina = gezocht.value.toLowerCase();
 
-  if (routes[pagina]) {
-    window.location.href = routes[pagina];
-  }
-});
+    if (routes[pagina]) {
+      window.location.href = routes[pagina];
+    }
+  });
+}
 
 // dialoog tekst typt zichzelf, net als in een game
 let dialoog = document.getElementById("dialoog");
@@ -64,8 +67,9 @@ async function typ() {
       if (klaar) return;
       t.zicht.textContent += t.tekst[i];
 
-      if (t.tekst[i] !== " " && i % 2 === 0) {
-        piep(300 + Math.random() * 40, 0.05, 0.03);
+      // sans praat bij elke 2e letter, niet bij spaties en leestekens
+      if (/[a-z0-9]/i.test(t.tekst[i]) && i % 2 === 0) {
+        sansPraat();
       }
       await new Promise((r) => setTimeout(r, 35));
     }
