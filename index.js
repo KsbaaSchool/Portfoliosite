@@ -18,6 +18,7 @@ let routes = {
   home: "index.html",
   projecten: "projecten.html",
   whoami: "index.html",
+  business: "business.html",
 };
 
 zoeksub.addEventListener("submit", function (e) {
