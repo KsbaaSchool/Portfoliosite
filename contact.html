@@ -18,100 +18,118 @@
       <source src="assets/video/SansVideo.mp4" type="video/mp4" />
     </video>
 
-    <button
-      id="themaknop"
-      class="themaknop"
-      type="button"
-      role="switch"
-      aria-checked="false"
-      aria-label="business thema"
-    >
-      <span class="knoptekst links" aria-hidden="true">GAME</span>
-      <span class="knoptekst rechts" aria-hidden="true">PRO</span>
-      <span class="knopbol" aria-hidden="true"></span>
-    </button>
+    <header class="topbalk">
+      <div class="topbalk-links">
+        <button
+          id="themaknop"
+          class="themaknop"
+          type="button"
+          role="switch"
+          aria-checked="false"
+          aria-label="business thema"
+        >
+          <span class="knoptekst links" aria-hidden="true">GAME</span>
+          <span class="knoptekst rechts" aria-hidden="true">PRO</span>
+          <span class="knopbol" aria-hidden="true"></span>
+          <span class="glitter g1" aria-hidden="true"></span>
+          <span class="glitter g2" aria-hidden="true"></span>
+          <span class="glitter g3" aria-hidden="true"></span>
+          <span class="glitter g4" aria-hidden="true"></span>
+          <span class="glitter g5" aria-hidden="true"></span>
+        </button>
 
-    <header>
+        <button
+          id="geluidknop"
+          class="geluidknop"
+          type="button"
+          aria-pressed="true"
+          aria-label="geluid"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor" />
+            <path class="golf" d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path class="kruis" d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
       <h1>Contact</h1>
+    </header>
 
-      <nav>
+    <div class="speelveld">
+      <nav class="menu" aria-label="hoofdmenu">
+        <p class="menutitel">Pause-Menu</p>
         <ul>
           <li>
-            <a href="index.html"> Whoami</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="index.html">Whoami</a>
           </li>
           <li>
-            <a href="projecten.html">Projecten</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="projecten.html">Projecten</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="blog.html">Blog</a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="contact.html" aria-current="page">Contact</a>
           </li>
         </ul>
       </nav>
-    </header>
 
-    <main>
-      <section>
-        <h2>Even mailen</h2>
-        <p>
-          Heb je een vraag over mijn werk of wil je samen iets bouwen, stuur
-          gerust een mail. ik reageer meestal snel
-        </p>
-      </section>
+      <main class="inhoud">
+        <section class="dialoog">
+          <h2>Even mailen</h2>
+          <p>
+            Heb je een vraag over mijn werk of wil je samen iets bouwen, stuur
+            gerust een mail. ik reageer meestal snel
+          </p>
+        </section>
 
-      <section>
-        <h2>Stuur een bericht</h2>
-        <form id="contactform" novalidate>
-          <label for="naam">Naam</label>
-          <input id="naam" type="text" />
-          <p id="naamfout" aria-live="polite"></p>
+        <section class="dialoog">
+          <h2>Stuur een bericht</h2>
+          <form id="contactform" novalidate>
+            <label for="naam">Naam</label>
+            <input id="naam" type="text" />
+            <p id="naamfout" aria-live="polite"></p>
 
-          <label for="email">Email</label>
-          <input id="email" type="email" />
-          <p id="emailfout" aria-live="polite"></p>
+            <label for="email">Email</label>
+            <input id="email" type="email" />
+            <p id="emailfout" aria-live="polite"></p>
 
-          <label for="bericht">Bericht</label>
-          <input id="bericht" type="text" />
-          <p id="berichtfout" aria-live="polite"></p>
+            <label for="bericht">Bericht</label>
+            <input id="bericht" type="text" />
+            <p id="berichtfout" aria-live="polite"></p>
 
-          <div class="knopje">
-            <button type="submit">Verstuur</button>
-            <div class="box"></div>
-          </div>
-        </form>
-        <p id="verstuurd" aria-live="polite"></p>
-      </section>
+            <div class="knoprij">
+              <button class="pixelknop" type="submit">Verstuur</button>
+            </div>
+          </form>
+          <p id="verstuurd" aria-live="polite"></p>
+        </section>
 
-      <section>
-        <h2>Waar je mij vindt</h2>
-        <ul>
-          <li class="contactli">
-            <a href="mailto:khalid.sbaa12@outlook.com">Email</a>
-            <div class="box"></div>
-          </li>
-          <li class="contactli">
-            <a href="https://github.com/KsbaaSchool">Github</a>
-            <div class="box"></div>
-          </li>
-        </ul>
-      </section>
+        <section class="dialoog">
+          <h2>Waar je mij vindt</h2>
+          <ul class="knoprij">
+            <li>
+              <a class="pixelknop" href="mailto:khalid.sbaa12@outlook.com">Email</a>
+            </li>
+            <li>
+              <a class="pixelknop" href="https://github.com/KsbaaSchool">Github</a>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Wie je mailt</h2>
-        <p>
-          Khalid, 2e jaars student software engineering op de haagse hogeschool
-        </p>
-      </section>
-    </main>
+        <section class="dialoog">
+          <h2>Wie je mailt</h2>
+          <p>
+            Khalid, 2e jaars student software engineering op de haagse hogeschool
+          </p>
+        </section>
+      </main>
+    </div>
 
     <footer></footer>
 
+    <script src="geluid.js"></script>
     <script src="contact.js"></script>
   </body>
 </html>

@@ -7,7 +7,6 @@
       name="description"
       content="De projecten die ik als software engineering student gemaakt heb, wat ik gebouwd heb en wat ik ervan geleerd heb."
     />
-
     <meta name="author" content="Khalid Sbaa" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="thema.js"></script>
@@ -19,56 +18,87 @@
       <source src="assets/video/SansVideo.mp4" type="video/mp4" />
     </video>
 
-    <button
-      id="themaknop"
-      class="themaknop"
-      type="button"
-      role="switch"
-      aria-checked="false"
-      aria-label="business thema"
-    >
-      <span class="knoptekst links" aria-hidden="true">GAME</span>
-      <span class="knoptekst rechts" aria-hidden="true">PRO</span>
-      <span class="knopbol" aria-hidden="true"></span>
-    </button>
+    <header class="topbalk">
+      <div class="topbalk-links">
+        <button
+          id="themaknop"
+          class="themaknop"
+          type="button"
+          role="switch"
+          aria-checked="false"
+          aria-label="business thema"
+        >
+          <span class="knoptekst links" aria-hidden="true">GAME</span>
+          <span class="knoptekst rechts" aria-hidden="true">PRO</span>
+          <span class="knopbol" aria-hidden="true"></span>
+          <span class="glitter g1" aria-hidden="true"></span>
+          <span class="glitter g2" aria-hidden="true"></span>
+          <span class="glitter g3" aria-hidden="true"></span>
+          <span class="glitter g4" aria-hidden="true"></span>
+          <span class="glitter g5" aria-hidden="true"></span>
+        </button>
 
-    <header>
+        <button
+          id="geluidknop"
+          class="geluidknop"
+          type="button"
+          aria-pressed="true"
+          aria-label="geluid"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor" />
+            <path class="golf" d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path class="kruis" d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
       <h1>Projecten</h1>
 
-      <nav>
+      <search id="zoekcontainer">
+        <form id="zoeksub">
+          <label for="zoekbalk">Zoeken:</label>
+          <input id="zoekbalk" type="search" />
+          <button class="zoekknop" type="submit" aria-label="zoek">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <path d="M15 15l6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </button>
+        </form>
+      </search>
+    </header>
+
+    <div class="speelveld">
+      <nav class="menu" aria-label="hoofdmenu">
+        <p class="menutitel">Pause-Menu</p>
         <ul>
           <li>
-            <a href="index.html"> Whoami</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="index.html">Whoami</a>
           </li>
           <li>
-            <a href="projecten.html">Projecten</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="projecten.html" aria-current="page">Projecten</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="blog.html">Blog</a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="contact.html">Contact</a>
           </li>
         </ul>
       </nav>
-    </header>
 
-    <main>
-      <section id="repos"></section>
-    </main>
-
-    <search id="zoekcontainer">
-      <form id="zoeksub">
-        <input id="zoekbalk" />
-      </form>
-    </search>
+      <main class="inhoud">
+        <section class="dialoog">
+          <h2>Mijn repo's</h2>
+          <div id="repos"></div>
+        </section>
+      </main>
+    </div>
 
     <footer></footer>
 
+    <script src="geluid.js"></script>
     <script src="project.js"></script>
   </body>
 </html>

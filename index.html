@@ -10,7 +10,6 @@
     <meta name="author" content="Khalid Sbaa" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="thema.js"></script>
-
     <title>Khalids Portfolio</title>
   </head>
 
@@ -19,74 +18,150 @@
       <source src="assets/video/SansVideo.mp4" type="video/mp4" />
     </video>
 
-    <button
-      id="themaknop"
-      class="themaknop"
-      type="button"
-      role="switch"
-      aria-checked="false"
-      aria-label="business thema"
-    >
-      <span class="knoptekst links" aria-hidden="true">GAME</span>
-      <span class="knoptekst rechts" aria-hidden="true">PRO</span>
-      <span class="knopbol" aria-hidden="true"></span>
-    </button>
+    <header class="topbalk">
+      <div class="topbalk-links">
+        <button
+          id="themaknop"
+          class="themaknop"
+          type="button"
+          role="switch"
+          aria-checked="false"
+          aria-label="business thema"
+        >
+          <span class="knoptekst links" aria-hidden="true">GAME</span>
+          <span class="knoptekst rechts" aria-hidden="true">PRO</span>
+          <span class="knopbol" aria-hidden="true"></span>
+          <span class="glitter g1" aria-hidden="true"></span>
+          <span class="glitter g2" aria-hidden="true"></span>
+          <span class="glitter g3" aria-hidden="true"></span>
+          <span class="glitter g4" aria-hidden="true"></span>
+          <span class="glitter g5" aria-hidden="true"></span>
+        </button>
 
-    <header>
-      <h1 id="Kopt">Welkom op mijn Portfolio site</h1>
+        <button
+          id="geluidknop"
+          class="geluidknop"
+          type="button"
+          aria-pressed="true"
+          aria-label="geluid"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor" />
+            <path
+              class="golf"
+              d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              class="kruis"
+              d="M16 9l5 6M21 9l-5 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
 
-      <nav>
+      <h1>Welkom op mijn portfolio site</h1>
+
+      <search id="zoekcontainer">
+        <form id="zoeksub">
+          <label for="zoekbalk">Zoeken:</label>
+          <input id="zoekbalk" type="search" />
+          <button class="zoekknop" type="submit" aria-label="zoek">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle
+                cx="10"
+                cy="10"
+                r="6.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              />
+              <path
+                d="M15 15l6 6"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </form>
+      </search>
+    </header>
+
+    <div class="speelveld">
+      <nav class="menu" aria-label="hoofdmenu">
+        <p class="menutitel">Pause-Menu</p>
         <ul>
           <li>
-            <a href="index.html"> Whoami</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="index.html" aria-current="page"
+              >Whoami</a
+            >
           </li>
           <li>
-            <a href="projecten.html">Projecten</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="projecten.html">Projecten</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="blog.html">Blog</a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
-            <div class="box"></div>
+            <a class="pixelknop" href="contact.html">Contact</a>
           </li>
         </ul>
       </nav>
-    </header>
 
-    <main>
-      <img
-        id="potret"
-        src="assets/img/Khalid3.jpg"
-        alt="Portret"
-      />
+      <main class="thuis">
+        <section class="dialoog" id="dialoog">
+          <h2>Kort over mij</h2>
+          <p class="typ">
+            Mijn naam is Khalid, ik ben een 2e jaars student in de opleiding
+            software engineer
+          </p>
 
-      <section>
-        <h2>Kort over mij</h2>
-        <p>
-          Mijn naam is Khalid, ik ben een 2e jaars student in de opleiding
-          software engineer
-        </p>
-      </section>
+          <h3 class="typ">Waarom deze website:</h3>
+          <p class="typ">Je kan op deze website alles vinden over mij</p>
+          <span class="verder" aria-hidden="true"></span>
+        </section>
 
-      <section>
-        <h2>Waarom deze website</h2>
-        <p>Je kan op deze website alles vinden over mij</p>
-      </section>
-    </main>
+        <aside class="kaart" aria-label="spelerskaart">
+          <img
+            src="assets/img/spelerskaart.png"
+            alt="Spelerskaart met een rood pixel hartje in de ruimte"
+            width="353"
+            height="537"
+          />
+          <div class="kaart-info">
+            <h2 id="naampje">Khalid</h2>
+            <p class="lvl">Lvl 2 · Software engineer</p>
 
-    <search id="zoekcontainer">
-      <form id="zoeksub">
-        <label for="zoekbalk">Zoeken:</label>
-        <input id="zoekbalk" />
-      </form>
-    </search>
+            <!-- verander het getal bij --xp om een balk aan te passen -->
+            <ul class="stats">
+              <li class="stat" style="--xp: 70">
+                <span>Coding</span>
+                <span class="balk"></span>
+              </li>
+              <li class="stat" style="--xp: 99">
+                <span>UI/UX</span>
+                <span class="balk"></span>
+              </li>
+              <li class="stat" style="--xp: 65">
+                <span>Web dev</span>
+                <span class="balk"></span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
 
     <footer></footer>
 
+    <script src="geluid.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
