@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="nl" data-thema="business">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Khalid Sbaa, software engineering student op de Haagse Hogeschool. Ik bouw websites die snel, netjes en toegankelijk zijn. Bekijk mijn projecten, blog en neem contact op."
+    />
+    <meta name="author" content="Khalid Sbaa" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/business.css" />
+    <script src="thema.js"></script>
+    <title>Khalid Sbaa - Software Engineer</title>
+  </head>
+
+  <body>
+    <header id="balk">
+      <a class="logo" href="#home">Khalid<span>.</span></a>
+
+      <nav aria-label="hoofdmenu">
+        <ul>
+          <li><a href="#over">Over mij</a></li>
+          <li><a href="#diensten">Wat ik doe</a></li>
+          <li><a href="#projecten">Projecten</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="themaknop"
+        class="themaknop"
+        type="button"
+        role="switch"
+        aria-checked="true"
+        aria-label="business thema"
+      >
+        <span class="knoptekst links" aria-hidden="true">GAME</span>
+        <span class="knoptekst rechts" aria-hidden="true">PRO</span>
+        <span class="knopbol" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="held">
+        <div class="held-tekst opkomen">
+          <p class="bovenregel">Software engineer · Haagse Hogeschool</p>
+          <h1>Ik bouw websites die gewoon <em>werken</em>.</h1>
+          <p class="intro">
+            Hoi, ik ben Khalid. 2e jaars software engineering student die van
+            een idee een snelle, nette en toegankelijke website maakt.
+          </p>
+          <div class="knoppen">
+            <a class="knop knop-vol" href="#projecten">Bekijk mijn werk</a>
+            <a class="knop knop-rand" href="#contact">Neem contact op</a>
+          </div>
+
+          <ul class="cijfers">
+            <li><strong>2e</strong> jaar software engineering</li>
+            <li><strong id="aantalrepos">–</strong> repos op GitHub</li>
+            <li><strong>3</strong> schermformaten getest</li>
+          </ul>
+        </div>
+
+        <figure class="held-foto opkomen">
+          <img
+            src="assets/img/businessPotret.svg"
+            alt="Logo met de letters KS, van Khalid Sbaa, software engineer"
+            width="704"
+            height="1524"
+          />
+        </figure>
+      </section>
+
+      <section id="over" class="blok">
+        <div class="blok-kop opkomen">
+          <p class="bovenregel">Over mij</p>
+          <h2>Student, bouwer, perfectionist</h2>
+        </div>
+
+        <div class="over-grid">
+          <div class="opkomen">
+            <p>
+              Ik ben Khalid en ik zit in mijn 2e jaar software engineering op de
+              Haagse Hogeschool. Als ik eenmaal aan het bouwen ben stop ik pas
+              als het echt goed staat.
+            </p>
+            <p>
+              Deze site heeft 2 kanten. De game kant laat zien waar ik vandaan
+              kom en wat ik vet vind. Deze kant is voor als je snel wil zien
+              wat ik kan. Zelfde ik, andere jas.
+            </p>
+          </div>
+
+          <div class="opkomen">
+            <h3>Waar ik mee werk</h3>
+            <ul class="tags">
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Fetch en API's</li>
+              <li>Responsive design</li>
+              <li>Toegankelijkheid</li>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="diensten" class="blok blok-wit">
+        <div class="blok-kop opkomen">
+          <p class="bovenregel">Wat ik doe</p>
+          <h2>Van idee tot live site</h2>
+        </div>
+
+        <ul class="kaarten">
+          <li class="kaart opkomen">
+            <span class="nummer">01</span>
+            <h3>Websites bouwen</h3>
+            <p>
+              Met HTML, CSS en JavaScript. Nette code in aparte bestanden zodat
+              het later makkelijk aan te passen is.
+            </p>
+          </li>
+          <li class="kaart opkomen">
+            <span class="nummer">02</span>
+            <h3>Responsive</h3>
+            <p>
+              Werkt op je telefoon, tablet en laptop. Geen inzoomen en geen
+              scrollen naar opzij.
+            </p>
+          </li>
+          <li class="kaart opkomen">
+            <span class="nummer">03</span>
+            <h3>API koppelingen</h3>
+            <p>
+              Data ophalen met fetch en netjes laten zien. Met een laad en fout
+              status zodat je nooit naar een lege pagina kijkt.
+            </p>
+          </li>
+          <li class="kaart opkomen">
+            <span class="nummer">04</span>
+            <h3>Toegankelijk</h3>
+            <p>
+              Goed contrast, semantische HTML en formulieren die ook met een
+              screenreader werken.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projecten" class="blok">
+        <div class="blok-kop opkomen">
+          <p class="bovenregel">Projecten</p>
+          <h2>Wat ik gebouwd heb</h2>
+          <p>Direct opgehaald van mijn GitHub, dus altijd up to date.</p>
+        </div>
+
+        <search class="filters opkomen">
+          <form id="projectfilter">
+            <label for="projectzoek">Zoek project</label>
+            <input
+              id="projectzoek"
+              type="search"
+              placeholder="naam of beschrijving"
+            />
+
+            <label for="projectsort">Sorteer op</label>
+            <select id="projectsort">
+              <option value="nieuw">Laatst bijgewerkt</option>
+              <option value="naam">Naam A tot Z</option>
+              <option value="sterren">Meeste sterren</option>
+            </select>
+          </form>
+        </search>
+
+        <p id="projectstatus" class="status" aria-live="polite">
+          Projecten aan het laden...
+        </p>
+        <ul id="projectlijst" class="projecten"></ul>
+      </section>
+
+      <section id="blog" class="blok blok-wit">
+        <div class="blok-kop opkomen">
+          <p class="bovenregel">Blog</p>
+          <h2>Wat ik leer tijdens het bouwen</h2>
+        </div>
+
+        <div class="artikelen">
+          <article class="artikel opkomen">
+            <p class="meta"><time datetime="2026-09-22">22 sep 2026</time> · Design</p>
+            <h3>Waarom ik een tweede thema heb gemaakt</h3>
+            <p>
+              Mijn game site vind ik zelf echt vet maar niet iedereen snapt dat
+              meteen. Een stagebedrijf wil gewoon snel zien wie je bent en wat
+              je kan. Dus heb ik een knop gemaakt die de hele site omzet naar
+              deze zakelijke versie.
+            </p>
+          </article>
+
+          <article class="artikel opkomen">
+            <p class="meta"><time datetime="2026-09-22">22 sep 2026</time> · HTML</p>
+            <h3>Alles op 1 pagina</h3>
+            <p>
+              Hier heb ik geen losse paginas meer. De links in het menu springen
+              naar een id op de pagina en met scroll behavior smooth glijdt hij
+              er netjes heen. Met scroll padding top valt de kop niet meer onder
+              de menubalk.
+            </p>
+          </article>
+
+          <article class="artikel opkomen">
+            <p class="meta"><time datetime="2026-09-21">21 sep 2026</time> · JavaScript</p>
+            <h3>Repos ophalen met fetch</h3>
+            <p>
+              Mijn projecten komen direct van de GitHub API. Maak ik een nieuwe
+              repo dan staat hij er vanzelf bij. Gaat het laden mis dan zie je
+              een melding in plaats van niks.
+            </p>
+          </article>
+
+          <article class="artikel opkomen">
+            <p class="meta"><time datetime="2026-09-22">22 sep 2026</time> · CSS</p>
+            <h3>De switch knop</h3>
+            <p>
+              Het is een button met role switch en aria checked zodat een
+              screenreader weet of hij aan of uit staat. Het rondje schuift met
+              transform en een cubic bezier zodat hij een beetje doorschiet.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="blok">
+        <div class="contact-grid">
+          <div class="opkomen">
+            <p class="bovenregel">Contact</p>
+            <h2>Samen iets bouwen?</h2>
+            <p>
+              Heb je een vraag, een stageplek of een project? Stuur gerust een
+              bericht. Ik reageer meestal snel.
+            </p>
+
+            <ul class="contactlinks">
+              <li>
+                <span>Email</span>
+                <a href="mailto:khalid.sbaa12@outlook.com">khalid.sbaa12@outlook.com</a>
+              </li>
+              <li>
+                <span>GitHub</span>
+                <a href="https://github.com/KsbaaSchool">github.com/KsbaaSchool</a>
+              </li>
+            </ul>
+          </div>
+
+          <form id="bcontactform" class="formulier opkomen" novalidate>
+            <div class="veld">
+              <label for="bnaam">Naam</label>
+              <input
+                id="bnaam"
+                type="text"
+                autocomplete="name"
+                aria-describedby="bnaamfout"
+              />
+              <p id="bnaamfout" class="fout" aria-live="polite"></p>
+            </div>
+
+            <div class="veld">
+              <label for="bemail">Email</label>
+              <input
+                id="bemail"
+                type="email"
+                autocomplete="email"
+                aria-describedby="bemailfout"
+              />
+              <p id="bemailfout" class="fout" aria-live="polite"></p>
+            </div>
+
+            <div class="veld">
+              <label for="bbericht">Bericht</label>
+              <textarea
+                id="bbericht"
+                rows="5"
+                aria-describedby="bberichtfout"
+              ></textarea>
+              <p id="bberichtfout" class="fout" aria-live="polite"></p>
+            </div>
+
+            <button class="knop knop-vol" type="submit">Verstuur bericht</button>
+            <p id="bverstuurd" class="gelukt" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Khalid Sbaa · Software Engineer</p>
+      <a href="#home">Naar boven ↑</a>
+    </footer>
+
+    <script src="business.js"></script>
+  </body>
+</html>
