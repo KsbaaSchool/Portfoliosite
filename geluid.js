@@ -20,6 +20,9 @@ function maakCtx() {
   }
 }
 
+// kom je via een klik op mijn site hier, dan mag geluid meestal meteen
+maakCtx();
+
 // browsers laten pas geluid toe na de eerste klik of toets
 document.addEventListener("pointerdown", maakCtx, { once: true });
 document.addEventListener("keydown", maakCtx, { once: true });
@@ -47,6 +50,38 @@ function piep(toon, duur, volume) {
   gain.connect(audioCtx.destination);
   osc.start(nu);
   osc.stop(nu + duur);
+}
+
+// sans stem voor de dialoog, ik speel steeds 1 blipje uit sansStem.mp3
+// het blipje zit van 0.03 tot 0.096 seconden in het bestand
+let sansGeluid;
+let blipStart = 0.03;
+let blipDuur = 0.066;
+
+fetch("assets/audio/sansStem.mp3")
+  .then((antwoord) => antwoord.arrayBuffer())
+  .then((data) => new OfflineAudioContext(1, 1, 44100).decodeAudioData(data))
+  .then((buffer) => (sansGeluid = buffer))
+  .catch(() => {});
+
+function sansPraat() {
+  if (!geluidAan || !sansGeluid || !audioCtx || audioCtx.state !== "running") return;
+
+  let bron = audioCtx.createBufferSource();
+  let gain = audioCtx.createGain();
+  let nu = audioCtx.currentTime;
+
+  bron.buffer = sansGeluid;
+
+  // heel kort in en uit faden zodat je geen tikje hoort
+  gain.gain.setValueAtTime(0, nu);
+  gain.gain.linearRampToValueAtTime(0.8, nu + 0.004);
+  gain.gain.setValueAtTime(0.8, nu + blipDuur - 0.01);
+  gain.gain.linearRampToValueAtTime(0, nu + blipDuur);
+
+  bron.connect(gain);
+  gain.connect(audioCtx.destination);
+  bron.start(nu, blipStart, blipDuur);
 }
 
 // geluid aan en uit knop
