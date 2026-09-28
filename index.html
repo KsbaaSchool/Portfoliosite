@@ -112,7 +112,23 @@
           />
           <div class="kaart-info">
             <h2 id="naampje">Khalid</h2>
-            <p class="lvl">Lvl 2 · Software engineer</p>
+            <p class="lvl">
+              Lvl <span id="levelgetal">0</span> · Software engineer
+            </p>
+
+            <!-- xp balk, vult zich als je stages haalt in de geheime minigame -->
+            <div
+              id="xpbalk"
+              class="xp"
+              role="progressbar"
+              aria-label="XP naar het volgende level"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
+              <span id="xpvulling" class="xp-vulling"></span>
+            </div>
+            <p id="xpmelding" class="sr-only" aria-live="polite"></p>
 
             <!-- verander het getal bij --xp om een balk aan te passen -->
             <ul class="stats">
@@ -136,7 +152,47 @@
 
     <footer></footer>
 
+    <!-- geheime minigame, klik 3 keer op het tekstvak "Kort over mij" -->
+    <dialog id="spelvenster" class="spelvenster" aria-labelledby="spelvraag">
+      <p id="spelvraag" class="spelvraag"></p>
+      <p id="spelstatus" class="spelstatus"></p>
+
+      <div id="keuzes" class="keuzes">
+        <button id="jaknop" class="keuze" type="button">YES</button>
+        <button id="neeknop" class="keuze nee" type="button">NO</button>
+      </div>
+
+      <canvas
+        id="spelveld"
+        class="spelveld"
+        width="480"
+        height="360"
+        tabindex="-1"
+        hidden
+      >
+        Minigame: ontwijk de botten met de pijltjes
+      </canvas>
+      <p id="spelhulp" class="spelhulp" hidden>
+        pijltjes of WASD bewegen · omhoog of spatie springen (blauw) · E taart
+        eten · P pauze · Esc stoppen · op je telefoon sleep je met je vinger
+      </p>
+      <button id="itemknop" class="keuze itemknop" type="button" hidden>
+        TAART
+      </button>
+
+      <!-- deze knoppen maakt minigame.js zelf aan -->
+      <div id="eindknoppen" class="keuzes" hidden></div>
+    </dialog>
+
+
+    <!-- laag bovenop alles waar de xp kristallen in vliegen -->
+    <div id="xplaag" class="xplaag" popover="manual" aria-hidden="true">
+      <canvas id="xpcanvas"></canvas>
+    </div>
+
     <script src="geluid.js"></script>
     <script src="index.js"></script>
+    <script src="spel.js"></script>
+    <script src="minigame.js"></script>
   </body>
 </html>

@@ -52,6 +52,57 @@ function piep(toon, duur, volume) {
   osc.stop(nu + duur);
 }
 
+// toon die omhoog of omlaag glijdt, voor de blasters in de minigame
+function sweep(van, tot, duur, volume) {
+  if (!geluidAan || !audioCtx || audioCtx.state !== "running") return;
+
+  let osc = audioCtx.createOscillator();
+  let gain = audioCtx.createGain();
+  let nu = audioCtx.currentTime;
+
+  osc.type = "square";
+  osc.frequency.setValueAtTime(van, nu);
+  osc.frequency.exponentialRampToValueAtTime(tot, nu + duur);
+  gain.gain.setValueAtTime(volume, nu);
+  gain.gain.exponentialRampToValueAtTime(0.0001, nu + duur);
+
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+  osc.start(nu);
+  osc.stop(nu + duur);
+}
+
+// ruis, klinkt als een knal of een straal
+let ruisBuffer;
+
+function ruis(duur, volume, filterToon) {
+  if (!geluidAan || !audioCtx || audioCtx.state !== "running") return;
+
+  // 1 seconde willekeurige ruis, die maak ik maar 1 keer
+  if (!ruisBuffer) {
+    ruisBuffer = audioCtx.createBuffer(1, audioCtx.sampleRate, audioCtx.sampleRate);
+    let data = ruisBuffer.getChannelData(0);
+    for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+  }
+
+  let bron = audioCtx.createBufferSource();
+  let filter = audioCtx.createBiquadFilter();
+  let gain = audioCtx.createGain();
+  let nu = audioCtx.currentTime;
+
+  bron.buffer = ruisBuffer;
+  filter.type = "lowpass";
+  filter.frequency.value = filterToon;
+  gain.gain.setValueAtTime(volume, nu);
+  gain.gain.exponentialRampToValueAtTime(0.0001, nu + duur);
+
+  bron.connect(filter);
+  filter.connect(gain);
+  gain.connect(audioCtx.destination);
+  bron.start(nu);
+  bron.stop(nu + duur);
+}
+
 // sans stem voor de dialoog, ik speel steeds 1 blipje uit sansStem.mp3
 // het blipje zit van 0.03 tot 0.096 seconden in het bestand
 let sansGeluid;
@@ -82,6 +133,36 @@ function sansPraat() {
   bron.connect(gain);
   gain.connect(audioCtx.destination);
   bron.start(nu, blipStart, blipDuur);
+}
+
+// een mp3 inladen zodat je er later stukjes uit kan afspelen
+function laadGeluid(pad) {
+  return fetch(pad)
+    .then((antwoord) => antwoord.arrayBuffer())
+    .then((data) => new OfflineAudioContext(1, 1, 44100).decodeAudioData(data))
+    .catch(() => null);
+}
+
+// speel een stuk van een geluid af, van seconde "van" en "duur" lang
+// met "over" kan je het een paar seconden later laten beginnen
+function speelStuk(buffer, van, duur, volume, over = 0) {
+  if (!geluidAan || !buffer || !audioCtx || audioCtx.state !== "running") return;
+
+  let bron = audioCtx.createBufferSource();
+  let gain = audioCtx.createGain();
+  let start = audioCtx.currentTime + over;
+
+  bron.buffer = buffer;
+
+  // zacht in en uit faden
+  gain.gain.setValueAtTime(0, start);
+  gain.gain.linearRampToValueAtTime(volume, start + 0.01);
+  gain.gain.setValueAtTime(volume, start + Math.max(0.02, duur - 0.3));
+  gain.gain.linearRampToValueAtTime(0, start + duur);
+
+  bron.connect(gain);
+  gain.connect(audioCtx.destination);
+  bron.start(start, van, duur);
 }
 
 // geluid aan en uit knop
