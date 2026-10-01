@@ -8,6 +8,12 @@ let bericht = document.getElementById("bericht");
 let naamfout = document.getElementById("naamfout");
 let emailfout = document.getElementById("emailfout");
 let berichtfout = document.getElementById("berichtfout");
+let input = document.querySelectorAll("input");
+
+input.forEach((element) => {
+  element.style.width = "200px";
+});
+
 function checkVeld(veld, fout, tekst) {
   if (veld.value.trim() === "") {
     fout.textContent = tekst;

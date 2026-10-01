@@ -21,68 +21,12 @@ let routes = {
   business: "business.html",
 };
 
-// de zoekbalk staat niet meer op home, dus eerst checken of hij er is
-if (zoeksub) {
-  zoeksub.addEventListener("submit", function (e) {
-    e.preventDefault();
+zoeksub.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    let pagina = gezocht.value.toLowerCase();
+  let pagina = gezocht.value.toLowerCase();
 
-    if (routes[pagina]) {
-      window.location.href = routes[pagina];
-    }
-  });
-}
-
-// dialoog tekst typt zichzelf, net als in een game
-let dialoog = document.getElementById("dialoog");
-let regels = dialoog.querySelectorAll(".typ");
-let rustigAan = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-let klaar = false;
-let teksten = [];
-
-regels.forEach((regel) => {
-  let tekst = regel.textContent.trim().replace(/\s+/g, " ");
-
-  // screenreaders krijgen gewoon meteen de hele tekst
-  let echt = document.createElement("span");
-  echt.className = "sr-only";
-  echt.textContent = tekst;
-
-  let zicht = document.createElement("span");
-  zicht.setAttribute("aria-hidden", "true");
-
-  regel.replaceChildren(echt, zicht);
-  teksten.push({ zicht, tekst });
-});
-
-function allesTonen() {
-  klaar = true;
-  teksten.forEach((t) => (t.zicht.textContent = t.tekst));
-}
-
-async function typ() {
-  for (const t of teksten) {
-    for (let i = 0; i < t.tekst.length; i++) {
-      if (klaar) return;
-      t.zicht.textContent += t.tekst[i];
-
-      // sans praat bij elke 2e letter, niet bij spaties en leestekens
-      if (/[a-z0-9]/i.test(t.tekst[i]) && i % 2 === 0) {
-        sansPraat();
-      }
-      await new Promise((r) => setTimeout(r, 35));
-    }
-    await new Promise((r) => setTimeout(r, 300));
+  if (routes[pagina]) {
+    window.location.href = routes[pagina];
   }
-  klaar = true;
-}
-
-// klik op het vak om meteen alles te zien
-dialoog.addEventListener("click", allesTonen);
-
-if (rustigAan) {
-  allesTonen();
-} else {
-  typ();
-}
+});
